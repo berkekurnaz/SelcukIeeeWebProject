@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SelcukIeeeWebProject.DataAccessLayer;
+using SelcukIeeeWebProject.Filter;
 using SelcukIeeeWebProject.Models;
 
 namespace SelcukIeeeWebProject.Controllers.Site
 {
+    [AuthFilter]
     public class YonetimBlogController : Controller
     {
 

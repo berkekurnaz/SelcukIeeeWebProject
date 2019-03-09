@@ -11,6 +11,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
     {
 
         /* Bütün Bloglarin Listelenmesi */
+        /// <summary>
+        /// Butun Bloglari Liste Seklinde Geri Dondurur.
+        /// </summary>
         public List<Blogs> GetAll()
         {
             var list = new List<Blogs>();
@@ -26,6 +29,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Id Numarasına Gore Tek Blogun Getirilmesi */
+        /// <summary>
+        /// Id Numarasina Gore Tek Bir Blog Geri Dondurur.
+        /// </summary>
         public Blogs GetById(int id)
         {
             var result = new Blogs();
@@ -38,6 +44,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Yeni Bir Blog Ekleme */
+        /// <summary>
+        /// Icerisine Verilen Blog Sinifini Veritabanina Ekler.
+        /// </summary>
         public void Add(Blogs entity)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))
@@ -48,6 +57,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Bir Blog Silme */
+        /// <summary>
+        /// Icerisine Verilen Id Numarasina Gore Blogu Veritabanindan Siler.
+        /// </summary>
         public void Delete(int id)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))
@@ -58,6 +70,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Bir Blog Guncelleme */
+        /// <summary>
+        /// Icerisine Verilen Blog Sinifini Veritabanindan Gunceller.
+        /// </summary>
         public void Update(Blogs entity)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))

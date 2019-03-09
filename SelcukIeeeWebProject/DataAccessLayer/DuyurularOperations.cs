@@ -11,6 +11,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
     {
 
         /* Bütün Duyurularin Listelenmesi */
+        /// <summary>
+        /// Butun Duyurulari Liste Seklinde Geri Dondurur.
+        /// </summary>
         public List<Duyurulars> GetAll()
         {
             var list = new List<Duyurulars>();
@@ -26,6 +29,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Id Numarasına Gore Tek Duyurunun Getirilmesi */
+        /// <summary>
+        /// Id Numarasina Gore Tek Bir Duyuru Geri Dondurur.
+        /// </summary>
         public Duyurulars GetById(int id)
         {
             var result = new Duyurulars();
@@ -38,6 +44,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Yeni Bir Duyuru Ekleme */
+        /// <summary>
+        /// Icerisine Verilen Duyurular Sinifini Veritabanina Ekler.
+        /// </summary>
         public void Add(Duyurulars entity)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))
@@ -48,6 +57,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Bir Duyuru Silme */
+        /// <summary>
+        /// Icerisine Verilen Id Numarasina Gore Duyuruyu Veritabanindan Siler.
+        /// </summary>
         public void Delete(int id)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))
@@ -58,6 +70,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Bir Duyuru Guncelleme */
+        /// <summary>
+        /// Icerisine Verilen Duyurular Sinifini Veritabanindan Gunceller.
+        /// </summary>
         public void Update(Duyurulars entity)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))

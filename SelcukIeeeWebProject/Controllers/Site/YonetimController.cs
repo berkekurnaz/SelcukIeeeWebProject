@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SelcukIeeeWebProject.DataAccessLayer;
 using SelcukIeeeWebProject.Models;
+using SelcukIeeeWebProject.Filter;
 
 namespace SelcukIeeeWebProject.Controllers.Site
 {
@@ -18,20 +19,27 @@ namespace SelcukIeeeWebProject.Controllers.Site
         BlogOperations blogOperations = new BlogOperations();
         YoneticiOperations yoneticiOperations = new YoneticiOperations();
 
+        [AuthFilter]
         public IActionResult Index()
         {
             ViewBag.MesajSayisi = iletisimOperations.GetAll().Count;
             ViewBag.DuyuruSayisi = duyurularOperations.GetAll().Count;
             ViewBag.EtkinlikSayisi = etkinlikOperations.GetAll().Count;
             ViewBag.BlogSayisi = blogOperations.GetAll().Count;
+
+            var loginUsername = HttpContext.Session.GetString("SessionUsername");
+            ViewBag.Username = loginUsername;
+
             return View();
         }
 
+        [AuthFilter]
         public IActionResult Error()
         {
             return View();
         }
 
+        [AuthFilter]
         public IActionResult TeknikDestek()
         {
             return View();
@@ -48,7 +56,7 @@ namespace SelcukIeeeWebProject.Controllers.Site
             var newYonetici = yoneticiOperations.Login(yonetici);
             if (newYonetici != null)
             {
-                // Buraya Session Olusturma Islemi Eklenecek.
+                HttpContext.Session.SetString("SessionUsername", newYonetici.KullaniciAdi);
                 return RedirectToAction("Index", "Yonetim");
             }
             return View(yonetici);
@@ -56,7 +64,7 @@ namespace SelcukIeeeWebProject.Controllers.Site
 
         public IActionResult Cikis()
         {
-            // Session Temizleme Islemi Burada Yapilacak.
+            HttpContext.Session.Clear();
             return RedirectToAction("Index", "Anasayfa");
         }
 

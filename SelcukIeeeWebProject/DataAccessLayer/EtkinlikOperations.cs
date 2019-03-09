@@ -11,6 +11,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
     {
 
         /* Bütün Etkinliklerin Listelenmesi */
+        /// <summary>
+        /// Butun Etkinlikleri Liste Seklinde Geri Dondurur.
+        /// </summary>
         public List<Etkinliks> GetAll()
         {
             var list = new List<Etkinliks>();
@@ -26,6 +29,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Id Numarasına Gore Tek Etkinligin Getirilmesi */
+        /// <summary>
+        /// Id Numarasina Gore Tek Bir Etkinlik Geri Dondurur.
+        /// </summary>
         public Etkinliks GetById(int id)
         {
             var result = new Etkinliks();
@@ -38,6 +44,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Yeni Bir Etkinlik Ekleme */
+        /// <summary>
+        /// Icerisine Verilen Etkinlik Sinifini Veritabanina Ekler.
+        /// </summary>
         public void Add(Etkinliks entity)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))
@@ -48,6 +57,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Bir Etkinlik Silme */
+        /// <summary>
+        /// Icerisine Verilen Id Numarasina Gore Etkinligi Veritabanindan Siler.
+        /// </summary>
         public void Delete(int id)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))
@@ -58,6 +70,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Bir Etkinlik Guncelleme */
+        /// <summary>
+        /// Icerisine Verilen Etkinlik Sinifini Veritabanindan Gunceller.
+        /// </summary>
         public void Update(Etkinliks entity)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))

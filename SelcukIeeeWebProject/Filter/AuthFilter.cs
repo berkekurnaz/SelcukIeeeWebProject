@@ -1,4 +1,5 @@
-﻿
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 using System.Collections.Generic;
@@ -7,12 +8,14 @@ using System.Threading.Tasks;
 
 namespace SelcukIeeeWebProject.Filter
 {
-    public class AuthFilter : IAuthorizationFilter
+    public class AuthFilter : Attribute,IAuthorizationFilter
     {
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            // Buraya Session Kontrolu Eklenecek.
-            throw new NotImplementedException();
+            if (context.HttpContext.Session.GetString("SessionUsername") == null)
+            {
+                context.Result = new RedirectResult("/Anasayfa/Index/");
+            }
         }
     }
 }

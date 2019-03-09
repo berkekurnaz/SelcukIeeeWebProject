@@ -11,6 +11,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
     {
 
         /* Bütün Yoneticilerin Listelenmesi */
+        /// <summary>
+        /// Butun Yoneticileri Liste Seklinde Geri Dondurur.
+        /// </summary>
         public List<Yoneticis> GetAll()
         {
             var list = new List<Yoneticis>();
@@ -26,6 +29,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Id Numarasına Gore Tek Yoneticinin Getirilmesi */
+        /// <summary>
+        /// Id Numarasina Gore Tek Bir Yonetici Geri Dondurur.
+        /// </summary>
         public Yoneticis GetById(int id)
         {
             var result = new Yoneticis();
@@ -38,6 +44,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Yeni Bir Yonetici Ekleme */
+        /// <summary>
+        /// Icerisine Verilen Yonetici Sinifini Veritabanina Ekler.
+        /// </summary>
         public void Add(Yoneticis entity)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))
@@ -48,6 +57,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Bir Yonetici Silme */
+        /// <summary>
+        /// Icerisine Verilen Id Numarasina Gore Yoneticiyi Veritabanindan Siler.
+        /// </summary>
         public void Delete(int id)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))
@@ -58,6 +70,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Bir Yonetici Guncelleme */
+        /// <summary>
+        /// Icerisine Verilen Yonetici Sinifini Veritabanindan Gunceller.
+        /// </summary>
         public void Update(Yoneticis entity)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))
@@ -68,6 +83,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Bir Yoneticinin Sisteme Giris Yapmasi */
+        /// <summary>
+        /// Icerisine Verilen Yonetici Sinifini Sisteme Giris Etmeye Yarar.
+        /// </summary>
         public Yoneticis Login(Yoneticis entity)
         {
             var result = new Yoneticis();

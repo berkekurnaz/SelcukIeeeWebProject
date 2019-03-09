@@ -11,6 +11,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
     {
 
         /* Bütün Etkinlik Fotograflarinin Listelenmesi */
+        /// <summary>
+        /// Butun Etkinlik Fotograflarini Liste Seklinde Geri Dondurur.
+        /// </summary>
         public List<EtkinlikFotografs> GetAll()
         {
             var list = new List<EtkinlikFotografs>();
@@ -26,6 +29,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Belirli Etkinlige Ait Butun Fotograflarin Getirilmesi */
+        /// <summary>
+        /// Id Numarasina Gore Belirli Bir Etkinligin Fotograflarini Liste Seklinde Geri Dondurur.
+        /// </summary>
         public List<EtkinlikFotografs> GetAllByEtkinlik(int id)
         {
             var list = new List<EtkinlikFotografs>();
@@ -41,6 +47,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Id Numarasına Gore Tek Etkinlik Fotografinin Getirilmesi */
+        /// <summary>
+        /// Id Numarasina Gore Tek Bir Etkinlik Fotografi Geri Dondurur.
+        /// </summary>
         public EtkinlikFotografs GetById(int id)
         {
             var result = new EtkinlikFotografs();
@@ -53,6 +62,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Yeni Bir Etkinlik Fotografi Ekleme */
+        /// <summary>
+        /// Icerisine Verilen Etkinlik Fotograf Sinifini Veritabanina Ekler.
+        /// </summary>
         public void Add(EtkinlikFotografs entity)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))
@@ -63,6 +75,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Bir Etkinlik Fotografi Silme */
+        /// <summary>
+        /// Icerisine Verilen Id Numarasina Gore Etkinlik Fotografini Veritabanindan Siler.
+        /// </summary>
         public void Delete(int id)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))
@@ -73,6 +88,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Bir Etkinlik Fotografi Guncelleme */
+        /// <summary>
+        /// Icerisine Verilen Etkinlik Fotograf Sinifini Veritabanindan Gunceller.
+        /// </summary>
         public void Update(EtkinlikFotografs entity)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))

@@ -7,10 +7,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using SelcukIeeeWebProject.DataAccessLayer;
+using SelcukIeeeWebProject.Filter;
 using SelcukIeeeWebProject.Models;
 
 namespace SelcukIeeeWebProject.Controllers.Site
 {
+    [AuthFilter]
     public class YonetimFotograflarController : Controller
     {
 

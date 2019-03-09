@@ -11,6 +11,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
     {
 
         /* Bütün Mesajlarin Listelenmesi */
+        /// <summary>
+        /// Butun Mesajlari Liste Seklinde Geri Dondurur.
+        /// </summary>
         public List<Iletisims> GetAll()
         {
             var list = new List<Iletisims>();
@@ -26,6 +29,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Id Numarasına Gore Tek Mesajin Getirilmesi */
+        /// <summary>
+        /// Id Numarasina Gore Tek Bir Mesaj Geri Dondurur.
+        /// </summary>
         public Iletisims GetById(int id)
         {
             var result = new Iletisims();
@@ -38,6 +44,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Yeni Bir Mesaj Ekleme */
+        /// <summary>
+        /// Icerisine Verilen Iletisim Sinifini Veritabanina Ekler.
+        /// </summary>
         public void Add(Iletisims entity)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))
@@ -48,6 +57,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Bir Mesaj Silme */
+        /// <summary>
+        /// Icerisine Verilen Id Numarasina Gore Mesaji Veritabanindan Siler.
+        /// </summary>
         public void Delete(int id)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))
@@ -58,6 +70,9 @@ namespace SelcukIeeeWebProject.DataAccessLayer
         }
 
         /* Bir Mesaj Guncelleme */
+        /// <summary>
+        /// Icerisine Verilen Iletisim Sinifini Veritabanindan Gunceller.
+        /// </summary>
         public void Update(Iletisims entity)
         {
             using (var db = new LiteDatabase(@"myDatabase.db"))
