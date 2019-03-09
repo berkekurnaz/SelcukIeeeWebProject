@@ -1,0 +1,34 @@
+﻿@model Yoneticis
+@{
+    ViewData["Title"] = "Guncelle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-heading border bottom">
+                <h4 class="card-title text-center">Yeni Yönetici Ekle</h4>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-md-9 ml-auto mr-auto">
+                        <form asp-controller="YonetimYoneticiler" asp-action="Guncelle" method="post" enctype="multipart/form-data" class="form-horizontal mrg-top-40 pdd-right-30 ng-pristine ng-valid">
+                            <div class="form-group">
+                                <label>Kullanıcı Adı</label>
+                                <input type="text" class="form-control" asp-for="KullaniciAdi" value="@Model.KullaniciAdi">
+                            </div>
+                            <div class="form-group">
+                                <label>Şifre</label>
+                                <input type="text" class="form-control" asp-for="Sifre" value="@Model.Sifre">
+                            </div>
+                            <center><button type="submit" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i> Yönetici Güncelle</button></center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

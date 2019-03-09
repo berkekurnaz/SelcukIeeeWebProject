@@ -1,0 +1,42 @@
+﻿@model Duyurulars
+@{
+    ViewData["Title"] = "Sil";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-heading border bottom">
+                <h4 class="card-title text-center">Duyuru Sil</h4>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-md-9 ml-auto mr-auto">
+                        <form asp-controller="YonetimDuyurular" asp-action="Sil" method="post" class="form-horizontal mrg-top-40 pdd-right-30 ng-pristine ng-valid">
+                            <div class="form-group">
+                                <label>Başlık</label>
+                                <input type="text" class="form-control" asp-for="Baslik" value="@Model.Baslik" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Eklenme Tarihi</label>
+                                <input type="text" class="form-control" asp-for="Tarih" value="@Model.Tarih" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Gönderici</label>
+                                <input type="text" class="form-control" asp-for="Gonderici" value="@Model.Gonderici" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>İçerik</label>
+                                <textarea class="form-control" asp-for="Icerik" readonly>@Model.Icerik</textarea>
+                            </div>
+                            <center><button type="submit" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Duyuru Sil</button></center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

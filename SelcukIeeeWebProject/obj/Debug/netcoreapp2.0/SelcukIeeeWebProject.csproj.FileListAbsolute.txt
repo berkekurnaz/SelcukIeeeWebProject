@@ -1,0 +1,11 @@
+D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\bin\Debug\netcoreapp2.0\SelcukIeeeWebProject.deps.json
+D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\bin\Debug\netcoreapp2.0\SelcukIeeeWebProject.runtimeconfig.json
+D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\bin\Debug\netcoreapp2.0\SelcukIeeeWebProject.runtimeconfig.dev.json
+D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\bin\Debug\netcoreapp2.0\SelcukIeeeWebProject.dll
+D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\obj\Debug\netcoreapp2.0\SelcukIeeeWebProject.csprojAssemblyReference.cache
+D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\obj\Debug\netcoreapp2.0\SelcukIeeeWebProject.csproj.CoreCompileInputs.cache
+D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\obj\Debug\netcoreapp2.0\SelcukIeeeWebProject.AssemblyInfoInputs.cache
+D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\obj\Debug\netcoreapp2.0\SelcukIeeeWebProject.AssemblyInfo.cs
+D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\bin\Debug\netcoreapp2.0\SelcukIeeeWebProject.pdb
+D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\obj\Debug\netcoreapp2.0\SelcukIeeeWebProject.dll
+D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\obj\Debug\netcoreapp2.0\SelcukIeeeWebProject.pdb

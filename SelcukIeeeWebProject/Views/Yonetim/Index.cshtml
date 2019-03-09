@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card bg-info">
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <p class="text-uppercase font-size-13"><b>İLETİŞİM</b></p>
+                                <h1 class="no-mrg-top font-size-30">@ViewBag.MesajSayisi</h1>
+                                <span><b>Toplam Gelen Mesaj Sayısı</b></span>
+                            </div>
+                            <div class="col-md-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-primary">
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <p class="text-uppercase font-size-13"><b>DUYURULAR</b></p>
+                                <h1 class="no-mrg-top font-size-30">@ViewBag.DuyuruSayisi</h1>
+                                <span><b>Toplam Duyuru Sayısı</b></span>
+                            </div>
+                            <div class="col-md-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-success">
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <p class="text-uppercase font-size-13"><b>ETKİNLİKLER</b></p>
+                                <h1 class="no-mrg-top font-size-30">@ViewBag.EtkinlikSayisi</h1>
+                                <span><b>Toplam Etkinlik Sayısı</b></span>
+                            </div>
+                            <div class="col-md-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-danger">
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <p class="text-uppercase font-size-13"><b>BLOG</b></p>
+                                <h1 class="no-mrg-top font-size-30">@ViewBag.BlogSayisi</h1>
+                                <span><b>Toplam Blog Yazısı Sayısı</b></span>
+                            </div>
+                            <div class="col-md-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-block">
+                        <h4 class="card-title">Nasıl Kullanılır</h4>
+                        <div class="mrg-top-20">
+                            <p>- Bu Panel Aracılığıyla Gelen Mesajları Görüntüleyebilir, Duyuru Oluşturabilir, Düzenlenen Etkinlikleri Paylaşabilirsiniz.</p>
+                            <p>- Etkinliklere Ait Fotoğraf Eklemek İçin Önce Etkinliği Oluşturun. Daha Sonra Fotoğraflardan Bölümünden Etkinliği Seçerek Ekleme Yapabilirsiniz.</p>
+                            <p>- İletişim Bölümünden Gelen Mesajların Durumunu Okundu Veya Okunmadı Olarak Değiştirebilir Bu Sayede Diğer Yöneticilerede Bilgi Vermiş Olursunuz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-block">
+                        <h4 class="card-title">Bilgiler</h4>
+                        <div class="mrg-top-20">
+                            <p>- Bu İnternet Sitesi Mart 2019 Tarihinde Selçuk Ieee Öğrencileri Tarafından Geliştirilmiştir.</p>
+                            <p>- Bütün Açık Kaynak Dosyalar Sonradan Sistemi Değiştirmek İsteyenler İçin Paylaşılmıştır.</p>
+                            <p>- Yaptığınız Bütün Paylaşımlar Eş Zamanlı Olarak Mobil Uygulamadanda Paylaşılacaktır.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

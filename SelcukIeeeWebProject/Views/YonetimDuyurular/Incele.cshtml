@@ -1,0 +1,44 @@
+﻿@model Duyurulars
+@{
+    ViewData["Title"] = "Incele";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-heading border bottom">
+                <h4 class="card-title text-center">Duyuru İncele</h4>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-md-9 ml-auto mr-auto">
+                        <form class="form-horizontal mrg-top-40 pdd-right-30 ng-pristine ng-valid">
+                            <div class="form-group">
+                                <label>Başlık</label>
+                                <input type="text" class="form-control" asp-for="Baslik" value="@Model.Baslik" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Eklenme Tarihi</label>
+                                <input type="text" class="form-control" asp-for="Tarih" value="@Model.Tarih" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Gönderici</label>
+                                <input type="text" class="form-control" asp-for="Gonderici" value="@Model.Gonderici" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>İçerik</label>
+                                <textarea class="form-control" asp-for="Icerik" readonly>@Model.Icerik</textarea>
+                            </div>
+                            <center>
+                                <a href="/YonetimDuyurular/Index/" class="btn btn-info"><i class="fa fa-undo" aria-hidden="true"></i> Geriye Dön</a>
+                                <a href="/YonetimDuyurular/Guncelle/@Model.Id" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i> Güncelle</a>
+                                <a href="/YonetimDuyurular/Sil/@Model.Id" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Sil</a>
+                            </center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

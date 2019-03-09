@@ -1,0 +1,70 @@
+﻿@model Blogs
+@{
+    ViewData["Title"] = "Sil";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-heading border bottom">
+                <h4 class="card-title text-center">Blog Yazısını Sil</h4>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-md-9 ml-auto mr-auto">
+                        <form asp-controller="YonetimBlog" asp-action="Sil" method="post" enctype="multipart/form-data" class="form-horizontal mrg-top-40 pdd-right-30 ng-pristine ng-valid">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Başlık</label>
+                                        <input type="text" class="form-control" asp-for="Baslik" value="@Model.Baslik" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Eklenme Tarihi</label>
+                                        <input type="text" class="form-control" asp-for="EklenmeTarihi" value="@Model.EklenmeTarihi" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Yazar</label>
+                                        <input type="text" class="form-control" asp-for="Yazar" value="@Model.Yazar" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Fotoğraf İsmi</label>
+                                        <input type="text" class="form-control" asp-for="Fotograf" value="@Model.Fotograf" readonly>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Fotoğraf</label><br />
+                                <center><img src="~/img/bloglar/@Model.Fotograf" width="250" /></center>
+                            </div>
+
+                            <div class="form-group">
+                                <label>İçerik</label><br />
+                                <textarea asp-for="Icerik" class="form-control" readonly>@Html.Raw(Model.Icerik)</textarea>
+                            </div>
+                            <center><button type="submit" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Blog Yazısını Sil</button></center>
+                        </form>
+                        <center><a href="/YonetimBlog/Index/" class="btn btn-info"><i class="fa fa-undo" aria-hidden="true"></i> Geriye Dön</a></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('Icerik');
+</script>
+

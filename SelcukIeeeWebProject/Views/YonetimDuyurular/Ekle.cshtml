@@ -1,0 +1,41 @@
+﻿@model Duyurulars
+@{
+    ViewData["Title"] = "Ekle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-heading border bottom">
+                <h4 class="card-title text-center">Yeni Duyuru Ekle</h4>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-md-9 ml-auto mr-auto">
+                        <form asp-controller="YonetimDuyurular" asp-action="Ekle" method="post" enctype="multipart/form-data" class="form-horizontal mrg-top-40 pdd-right-30 ng-pristine ng-valid">
+                            <div class="form-group">
+                                <label>Başlık</label>
+                                <input type="text" class="form-control" asp-for="Baslik" placeholder="Başlık Giriniz...">
+                            </div>
+                            <div class="form-group">
+                                <label>Eklenme Tarihi</label>
+                                <input type="text" class="form-control" asp-for="Tarih" value="@DateTime.Now.ToShortDateString()">
+                            </div>
+                            <div class="form-group">
+                                <label>Gönderici</label>
+                                <input type="text" class="form-control" asp-for="Gonderici" value="Selçuk Ieee">
+                            </div>
+                            <div class="form-group">
+                                <label>İçerik</label>
+                                <textarea class="form-control" asp-for="Icerik" placeholder="İçeriği Giriniz..."></textarea>
+                            </div>
+                            <center><button type="submit" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Yeni Duyuru Ekle</button></center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

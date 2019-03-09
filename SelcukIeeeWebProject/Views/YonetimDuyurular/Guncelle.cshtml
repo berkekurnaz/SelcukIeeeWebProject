@@ -1,0 +1,42 @@
+﻿@model Duyurulars
+@{
+    ViewData["Title"] = "Guncelle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-heading border bottom">
+                <h4 class="card-title text-center">Duyuru Güncelle</h4>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-md-9 ml-auto mr-auto">
+                        <form asp-controller="YonetimDuyurular" asp-action="Guncelle" method="post" class="form-horizontal mrg-top-40 pdd-right-30 ng-pristine ng-valid">
+                            <div class="form-group">
+                                <label>Başlık</label>
+                                <input type="text" class="form-control" asp-for="Baslik" value="@Model.Baslik">
+                            </div>
+                            <div class="form-group">
+                                <label>Eklenme Tarihi</label>
+                                <input type="text" class="form-control" asp-for="Tarih" value="@Model.Tarih">
+                            </div>
+                            <div class="form-group">
+                                <label>Gönderici</label>
+                                <input type="text" class="form-control" asp-for="Gonderici" value="@Model.Gonderici">
+                            </div>
+                            <div class="form-group">
+                                <label>İçerik</label>
+                                <textarea class="form-control" asp-for="Icerik">@Model.Icerik</textarea>
+                            </div>
+                            <center><button type="submit" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i> Duyuru Güncelle</button></center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

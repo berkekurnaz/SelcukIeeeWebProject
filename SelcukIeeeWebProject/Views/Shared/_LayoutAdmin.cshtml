@@ -1,0 +1,371 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <title>Yönetim Paneli</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+
+    <!-- plugins css -->
+    <link href="~/admin/bootstrap.css" rel="stylesheet" />
+    <link href="~/admin/pace-theme-minimal.css" rel="stylesheet" />
+    <link href="~/admin/perfect-scrollbar.min.css" rel="stylesheet" />
+
+    <!-- page plugins css -->
+    <link href="~/admin/jquery-jvectormap-1.2.2.css" rel="stylesheet" />
+    <link href="~/admin/nv.d3.min.css" rel="stylesheet" />
+
+    <!-- TABLE STYLES-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" />
+
+
+    <!-- core css -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/admin/animate.min.css" rel="stylesheet" />
+    <link href="~/admin/app.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="app">
+        <div class="layout">
+            <!-- Side Nav START -->
+            <div class="side-nav">
+                <div class="side-nav-inner">
+                    <div class="side-nav-logo">
+                        <a href="#">
+                            <img class="logo logo-dark" src="~/admin/images/logoselcukieee.png" />
+                        </a>
+                        <div class="mobile-toggle side-nav-toggle">
+                            <a href="">
+                                <i class="ti-arrow-circle-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="side-nav-menu scrollable">
+                        <li class="nav-item">
+                            <a class="mrg-top-10" href="/Yonetim/Index/">
+                                <span class="icon-holder">
+                                    <i class="fa fa-home"></i>
+                                </span>
+                                <span class="title">Anasayfa</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </span>
+                                <span class="title">Hızlı İşlemler</span>
+                                <span class="arrow">
+                                    <i class="fa fa-arrow-down"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/YonetimDuyurular/Ekle/">Duyuru Ekle</a>
+                                </li>
+                                <li>
+                                    <a href="/YonetimEtkinlikler/Ekle/">Etkinlik Ekle</a>
+                                </li>
+                                <li>
+                                    <a href="/YonetimFotograflar/Ekle/">Fotograf Ekle</a>
+                                </li>
+                                <li>
+                                    <a href="/YonetimBlog/Ekle/">Blog Ekle</a>
+                                </li>
+                                <li>
+                                    <a href="/YonetimYoneticiler/Ekle/">Yönetici Ekle</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" href="/YonetimDuyurular/Index/">
+                                <span class="icon-holder">
+                                    <i class="fa fa-bell"></i>
+                                </span>
+                                <span class="title">Duyurular</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" href="/YonetimEtkinlikler/Index/">
+                                <span class="icon-holder">
+                                    <i class="fa fa-trophy"></i>
+                                </span>
+                                <span class="title">Etkinlikler</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" href="/YonetimFotograflar/Index/">
+                                <span class="icon-holder">
+                                    <i class="fa fa-picture-o"></i>
+                                </span>
+                                <span class="title">Fotoğraflar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" href="/YonetimIletisim/Index/">
+                                <span class="icon-holder">
+                                    <i class="fa fa-commenting"></i>
+                                </span>
+                                <span class="title">İletişim</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" href="/YonetimBlog/Index/">
+                                <span class="icon-holder">
+                                    <i class="fa fa-book"></i>
+                                </span>
+                                <span class="title">Blog</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" href="/YonetimYoneticiler/Index/">
+                                <span class="icon-holder">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                <span class="title">Yöneticiler</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" href="/Yonetim/TeknikDestek/">
+                                <span class="icon-holder">
+                                    <i class="fa fa-question"></i>
+                                </span>
+                                <span class="title">Teknik Destek</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" href="/Yonetim/Cikis/">
+                                <span class="icon-holder">
+                                    <i class="fa fa-sign-out"></i>
+                                </span>
+                                <span class="title">Çıkış</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Side Nav END -->
+            <!-- Page Container START -->
+            <div class="page-container">
+                <!-- Header START -->
+                <div class="header navbar">
+                    <div class="header-container">
+                        <ul class="nav-left">
+                            <li>
+                                <a class="side-nav-toggle" href="javascript:void(0);">
+                                    <i class="ti-view-grid"></i>
+                                </a>
+                            </li>
+                            <li class="search-box">
+                                <a class="search-toggle no-pdd-right" href="javascript:void(0);">
+                                    <i class="search-icon fa fa-search pdd-right-10"></i>
+                                    <i class="search-icon-close fa fa-times pdd-right-10"></i>
+                                </a>
+                            </li>
+                            <li class="search-input">
+                                <input class="form-control" type="text" placeholder="Arama Yap...">
+                                <div class="advanced-search">
+                                    <div class="search-wrapper">
+                                        <div class="pdd-vertical-10">
+                                            <span class="display-block mrg-vertical-5 pdd-horizon-20 text-gray">
+                                                <i class="ti-user pdd-right-5"></i>
+                                                <span>People</span>
+                                            </span>
+                                            <ul class="list-unstyled list-info">
+                                                <li>
+                                                    <a href="">
+                                                        <img class="thumb-img" src="assets/images/avatars/thumb-1.jpg" alt="">
+                                                        <div class="info">
+                                                            <span class="title">Jordan Hurst</span>
+                                                            <span class="sub-title">
+                                                                <i class="fa fa-location-arrow"></i>
+                                                                <span>44 Shirley Ave. West Chicago</span>
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        <img class="thumb-img" src="assets/images/avatars/thumb-5.jpg" alt="">
+                                                        <div class="info">
+                                                            <span class="title">Jennifer Watkins</span>
+                                                            <span class="sub-title">
+                                                                <i class="fa fa-location-arrow"></i>
+                                                                <span>514 S. Magnolia St. Orlando</span>
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        <img class="thumb-img" src="assets/images/avatars/thumb-4.jpg" alt="">
+                                                        <div class="info">
+                                                            <span class="title">Michael Birch</span>
+                                                            <span class="sub-title">
+                                                                <i class="ti-location-pin"></i>
+                                                                <span>70 Bowman St. South Windsor</span>
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="mrg-horizon-20 border top"></div>
+                                        <div class="pdd-vertical-10">
+                                            <span class="display-block mrg-vertical-5 pdd-horizon-20 text-gray">
+                                                <i class="ti-rss pdd-right-5"></i>
+                                                <span>Post</span>
+                                            </span>
+                                            <ul class="list-unstyled list-info">
+                                                <li>
+                                                    <a href="">
+                                                        <img class="thumb-img" src="assets/images/img-1.jpg" alt="">
+                                                        <div class="info">
+                                                            <span class="title">Artoo expresses his relief</span>
+                                                            <span class="sub-title">
+                                                                <span>Oh, thank goodness we're coming out...</span>
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        <img class="thumb-img" src="assets/images/img-2.jpg" alt="">
+                                                        <div class="info">
+                                                            <span class="title">Ready for some power?</span>
+                                                            <span class="sub-title">
+                                                                <span>Lord Vader. You may take Caption So...</span>
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="search-footer">
+                                        <span>You are Searching for '<b class="text-dark"><span class="serach-text-bind"></span></b>'</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="nav-right">
+                            <li class="user-profile dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                    <img class="profile-img img-fluid" src="assets/images/user.jpg" alt="">
+                                    <div class="user-info">
+                                        <span class="name pdd-right-5">Selçuk Ieee</span>
+                                        <i class="fa fa-arrow-down font-size-10"></i>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="">
+                                            <i class="fa fa-cog pdd-right-10"></i>
+                                            <span>Ayarlar</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa fa-user pdd-right-10"></i>
+                                            <span>Profil</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa fa-bell pdd-right-10"></i>
+                                            <span>Duyurular</span>
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <a href="">
+                                            <i class="ti-power-off pdd-right-10"></i>
+                                            <span>Çıkış Yap</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="notifications dropdown">
+                                <span class="counter">2</span>
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-bell"></i>
+                                </a>
+
+                                <ul class="dropdown-menu ">
+                                    <li class="notice-header">
+                                        <i class="ti-bell pdd-right-10"></i>
+                                        <span>Duyurular</span>
+                                    </li>
+                                    <li>
+                                        <ul class="list-info overflow-y-auto relative scrollable"></ul>
+                                    </li>
+
+                                    <li class="notice-footer">
+                                        <span>
+                                            <a href="" class="text-gray">Bütün Duyuruları Listele <i class="fa fa-bell pdd-left-5 font-size-10"></i></a>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="side-panel-toggle" href="javascript:void(0);">
+                                    <i class="ti-align-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Header END -->
+                <!-- Content Wrapper START -->
+                @RenderBody()
+                <!-- Content Wrapper END -->
+                <!-- Footer START -->
+                <footer class="content-footer">
+                    <div class="footer">
+                        <div class="copyright">
+                            <span><b class="text-dark">Berke Kurnaz</b> Tarafından Geliştirilmiştir © @DateTime.Now.Year. Saklı Olan Herhangi Bir Hakkı Bulunmamaktadır.</span>
+                            <span class="go-right">
+                                <a href="" class="text-gray mrg-right-15">Destek &amp; Sorunlar</a>
+                                <a href="" class="text-gray">Açık Kaynak Kodları</a>
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer END -->
+
+            </div>
+            <!-- Page Container END -->
+
+        </div>
+    </div>
+
+
+
+    <script src="~/admin/scripts/vendor.js"></script>
+    <!-- page plugins js -->
+    <script src="~/admin/scripts/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="~/admin/scripts/jquery-jvectormap-us-aea.js"></script>
+    <script src="~/admin/scripts/d3.min.js"></script>
+    <script src="~/admin/scripts/nv.d3.min.js"></script>
+    <script src="~/admin/scripts/index.js"></script>
+    <script src="~/admin/scripts/Chart.min.js"></script>
+    <script src="~/admin/scripts/app.min.js"></script>
+    <!-- page js -->
+    <script src="~/admin/scripts/dashboard.js"></script>
+
+    <!-- DATA TABLE SCRIPTS -->
+    <script src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/dataTables/dataTables.bootstrap.js"></script>
+
+
+</body>
+</html>

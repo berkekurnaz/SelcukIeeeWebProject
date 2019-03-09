@@ -1,0 +1,79 @@
+﻿@model Blogs
+@{
+    ViewData["Title"] = "Ekle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    input[type="file"] {
+        cursor: pointer !Important;
+        font: 300 14px sans-serif;
+        color: #9e9e9e;
+    }
+
+        input[type="file"]::-webkit-file-upload-button {
+            font: 300 14px sans-serif;
+            background: #009688;
+            border: 0;
+            padding: 12px 25px;
+            cursor: pointer;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        input[type="file"]::-ms-browse {
+            font: 300 14px 'Roboto', sans-serif;
+            background: #009688;
+            border: 0;
+            padding: 12px 25px;
+            cursor: pointer;
+            color: #fff;
+            text-transform: uppercase;
+        }
+</style>
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-heading border bottom">
+                <h4 class="card-title text-center">Yeni Blog Yazısı Ekle</h4>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-md-9 ml-auto mr-auto">
+                        <form asp-controller="YonetimBlog" asp-action="Ekle" method="post" enctype="multipart/form-data" class="form-horizontal mrg-top-40 pdd-right-30 ng-pristine ng-valid">
+                            <div class="form-group">
+                                <label>Başlık</label>
+                                <input type="text" class="form-control" asp-for="Baslik" placeholder="Blog Yazısının Başlığını Giriniz...">
+                            </div>
+                            <div class="form-group">
+                                <label>Eklenme Tarihi</label>
+                                <input type="text" class="form-control" asp-for="EklenmeTarihi" value="@DateTime.Now.ToShortDateString()">
+                            </div>
+                            <div class="form-group">
+                                <label>Yazar</label>
+                                <input type="text" class="form-control" asp-for="Yazar" placeholder="Blog Yazısının Yazarını Giriniz...">
+                            </div>
+                            <div class="form-group">
+                                <label>Fotoğraf</label>
+                                <input class="form-control" type="file" name="Image" />
+                            </div>
+                            <div class="form-group">
+                                <label>İçerik</label>
+                                <textarea asp-for="Icerik"  class="form-control"></textarea>
+                            </div>
+                            <center><button type="submit" class="btn btn-info"><i class="fa fa-plus" aria-hidden="true"></i> Yeni Blog Yazısı Ekle</button></center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('Icerik');
+</script>
+
+

@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Yoneticis>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<script src="https://webthemez.com/demo/brilliant-free-bootstrap-admin-template/assets/js/jquery-1.10.2.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#myTable').dataTable();
+    });
+</script>
+
+<div class="main-content">
+    <div class="container-fluid">
+
+        @if (Model.Count() > 0)
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title">Yöneticiler Listesi</h4>
+                            <div class="table-overflow table-responsive">
+                                <table id="myTable" class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Kullanıcı Adı</th>
+                                            <th>Şifre</th>
+                                            <th>İşlemler</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            @if (item.KullaniciAdi != "auth")
+                                            {
+                                                <tr>
+                                                    @if (item.KullaniciAdi.Length > 30)
+                                                    {
+                                                        <td>@item.KullaniciAdi.Substring(0, 30)</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>@item.KullaniciAdi</td>
+                                                    }
+                                                    <td>@item.Sifre</td>
+                                                    <td>
+                                                        <a href="/YonetimYoneticiler/Guncelle/@item.Id" class="btn btn-success btn-sm"><i class="fa fa-pencil" aria-hidden="true"></i> Güncelle</a>
+                                                        <a href="/YonetimYoneticiler/Sil/@item.Id" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i> Sil</a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="card">
+                <div class="card-block">
+                    <h4 class="card-title">Uyarı Kutusu</h4>
+                    <div class="mrg-top-20">
+                        <p>Burada Herhangi Bir İçerik Bulunmamaktadır...</p>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+    </div>
+</div>
+
+

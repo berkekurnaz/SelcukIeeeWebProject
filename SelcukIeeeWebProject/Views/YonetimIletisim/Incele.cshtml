@@ -1,0 +1,82 @@
+﻿@model Iletisims
+@{
+    ViewData["Title"] = "Incele";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-heading border bottom">
+                <h4 class="card-title text-center">Mesaj İncele</h4>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-md-9 ml-auto mr-auto">
+                        <form asp-controller="YonetimIletisim" asp-action="Incele" method="post" enctype="multipart/form-data" class="form-horizontal mrg-top-40 pdd-right-30 ng-pristine ng-valid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Ad Soyad</label>
+                                        <input type="text" class="form-control" asp-for="AdSoyad" value="@Model.AdSoyad" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Mail</label>
+                                        <input type="text" class="form-control" asp-for="Mail" value="@Model.Mail" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Telefon</label>
+                                        <input type="text" class="form-control" asp-for="Telefon" value="@Model.Telefon" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Gönderim Tarihi</label>
+                                        <input type="text" class="form-control" asp-for="Tarih" value="@Model.Tarih" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Mesaj Başlık</label>
+                                <input type="text" class="form-control" asp-for="Baslik" value="@Model.Baslik" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Mesaj İçerik</label>
+                                <textarea class="form-control" asp-for="Mesaj" readonly>@Model.Mesaj</textarea>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Mesaj Durumu</label><br />
+                                    <input type="text" value="@Model.Durum" class="form-control" readonly/>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Durum Değiştirme</label>
+                                        <select class="form-control" asp-for="Durum">
+                                            <option>Okunmadı</option>
+                                            <option>Okundu</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <center>
+                                <button type="submit" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Durum Güncelle</button>
+                                <a href="/YonetimIletisim/Index/" class="btn btn-info"><i class="fa fa-undo" aria-hidden="true"></i> Geriye Dön</a>
+                            </center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

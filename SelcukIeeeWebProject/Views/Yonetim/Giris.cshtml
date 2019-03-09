@@ -1,0 +1,87 @@
+﻿@model Yoneticis
+@{
+    ViewData["Title"] = "Giris";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <title>Yönetim Paneli</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+
+    <!-- plugins css -->
+    <link href="~/admin/bootstrap.css" rel="stylesheet" />
+    <link href="~/admin/pace-theme-minimal.css" rel="stylesheet" />
+    <link href="~/admin/perfect-scrollbar.min.css" rel="stylesheet" />
+
+    <!-- page plugins css -->
+    <link href="~/admin/jquery-jvectormap-1.2.2.css" rel="stylesheet" />
+    <link href="~/admin/nv.d3.min.css" rel="stylesheet" />
+
+    <!-- TABLE STYLES-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" />
+
+
+    <!-- core css -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/admin/animate.min.css" rel="stylesheet" />
+    <link href="~/admin/app.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="app">
+        <div class="authentication">
+            <div class="sign-in">
+                <div class="row no-mrg-horizon">
+                    <div class="col-md-8 no-pdd-horizon d-none d-md-block">
+                        <div class="full-height bg" style="background-image: url('http://themenate.com/espire/html/dist/assets/images/others/img-29.jpg')">
+                            <div class="img-caption">
+                                <h1 class="caption-title">Selçuk Ieee</h1>
+                                <p class="caption-text">Öğrenci Topluluğu Üye Giriş Sayfası</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 no-pdd-horizon">
+                        <div class="full-height bg-white height-100">
+                            <div class="vertical-align full-height pdd-horizon-70">
+                                <div class="table-cell">
+                                    <div class="pdd-horizon-15">
+                                        <h2>Üye Girişi</h2>
+                                        <p class="mrg-btm-15 font-size-13">Üye Giriş Ekranına Hoşgeldiniz...</p>
+                                        <form asp-controller="Yonetim" asp-action="Giris" method="post" enctype="multipart/form-data">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" asp-for="KullaniciAdi" placeholder="Kullanıcı Adı">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" asp-for="Sifre" placeholder="Şifre">
+                                            </div>
+                                            <div class="checkbox font-size-12">
+                                                <input id="agreement" name="agreement" type="checkbox">
+                                                <label for="agreement">Beni Hatırla</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-info">Giriş Yap</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="login-footer">
+                                <img class="img-responsive inline-block" src="/admin/images/logoselcukieee.png" width="100" alt="">
+                                <span class="font-size-13 pull-right pdd-top-10">Hesabın Yok Mu <a href="">Hemen Üye Ol</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/admin/scripts/vendor.js"></script>
+    <script src="~/admin/scripts/app.min.js"></script>
+
+</body>
+</html>
+

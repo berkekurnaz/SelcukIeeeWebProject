@@ -1,0 +1,43 @@
+﻿@model EtkinlikFotografs
+@{
+    ViewData["Title"] = "Incele";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-heading border bottom">
+                <h4 class="card-title text-center">Fotoğraf İncele</h4>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-md-9 ml-auto mr-auto">
+                        <form asp-controller="YonetimFotograflar" asp-action="Ekle" method="post" enctype="multipart/form-data" class="form-horizontal mrg-top-40 pdd-right-30 ng-pristine ng-valid">
+                            <div class="form-group">
+                                <label>Fotoğraf Adı</label>
+                                <input type="text" class="form-control" asp-for="Ad" value="@Model.Ad" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Etkinlik Numarası</label>
+                                <input type="text" class="form-control" asp-for="EtkinlikId" value="@Model.EtkinlikId" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Fotoğraf Yolu</label>
+                                <input type="text" class="form-control" asp-for="Fotograf" value="@Model.Fotograf" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Fotoğraf</label><br />
+                                <center><img src="~/img/etkinlikler/@Model.Fotograf" width="250" /></center>
+                            </div>
+                        </form>
+                        <center><a href="/YonetimFotograflar/Index/" class="btn btn-undo"><i class="fa fa-plus" aria-hidden="true"></i> Geriye Dön</a></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
