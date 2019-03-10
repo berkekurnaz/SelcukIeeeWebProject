@@ -119,8 +119,8 @@ $(document).ready(function(){
 
       // these are default options
       max: 100, 
-      value: 75, 
-      text: "", 
+      value: 100, 
+      text: "48", 
       rotate: 0, 
       caption: "", 
       template: [
@@ -141,8 +141,8 @@ $(document).ready(function(){
 
         // these are default options
         max: 100, 
-        value: 95, 
-        text: "", 
+        value: 100, 
+        text: "55", 
         rotate: 0, 
         caption: "", 
         template: [
@@ -163,8 +163,8 @@ $(document).ready(function(){
 
         // these are default options
         max: 100, 
-        value: 85, 
-        text: "", 
+        value: 100, 
+        text: "12", 
         rotate: 0, 
         caption: "", 
         template: [

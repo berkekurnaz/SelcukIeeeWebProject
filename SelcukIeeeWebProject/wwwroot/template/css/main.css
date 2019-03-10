@@ -98,6 +98,7 @@ a, a:focus, a:hover {
   outline: 0;
 }
 
+
 .card-panel {
   margin: 0;
   padding: 60px;
@@ -568,6 +569,17 @@ td, th {
 
 .text-white {
   color: #fff;
+}
+
+.yonetimimg{
+    padding: 0px;
+   border: 2px solid #021a40;
+ 
+ 
+}
+
+.yonetimimg:hover{
+    width: 300px;
 }
 
 .transition {
@@ -2492,12 +2504,30 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
+.kalin{
+    font-weight: bold;
+}
+
 .team-area {
   background-color: #f9f9ff;
 }
 
 .team-area .single-team {
   padding: 10px;
+
+}
+
+.team-area .kurul-team {
+  padding: 10px;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+
+.team-area .idari-team {
+  padding: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .team-area .thumb {
@@ -2789,7 +2819,7 @@ h6 {
 }
 
 .generic-banner .height {
-  height: 600px;
+  height: 200px;
 }
 
 @media (max-width: 767px) {

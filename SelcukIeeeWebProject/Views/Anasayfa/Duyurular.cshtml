@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Duyurulars>
+@{
+    ViewData["Title"] = "Duyurular";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<section class="generic-banner relative">
+    <div class="container">
+        <div class="row height align-items-center justify-content-center">
+            <div class="col-lg-10">
+                <div class="generic-banner-content">
+                    <h2 class="text-white">Duyurular</h2>
+                    <hr />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Start Ieee Nedir Area -->
+<section class="team-area section-gap" id="team">
+    <div class="container">
+
+        @foreach (var item in Model)
+        {
+            <center>
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 text-center">
+                                    @if(item.Baslik.Length > 50)
+                                    {
+                                        <p>@item.Baslik.Substring(0,50) ...</p>
+                                    }
+                                    else
+                                    {
+                                        <p>@item.Baslik</p>
+
+                                    }
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <p>Eklenme Tarihi : @item.Tarih</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <center><a href="/Anasayfa/DuyuruDetay/@item.Id" class="btn btn-outline-info">Duyuru Oku</a></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+            </center>
+        }
+
+    </div>
+</section>
+<!-- End Ieee Nedir Area -->

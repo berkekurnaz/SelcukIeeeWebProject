@@ -1,0 +1,67 @@
+﻿@model Iletisims
+@{
+    ViewData["Title"] = "Iletisim";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<section class="team-area section-gap pt-5">
+    <div class="container">
+
+        <center>
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-body">
+                        İletişim Bölümü
+                        <hr />
+                        <form asp-controller="Anasayfa" asp-action="Iletisim" method="post" enctype="multipart/form-data">
+
+                            <center>
+                                <div class="form-group col-md-10 text-center">
+                                    <label>Ad Soyad</label>
+                                    <input type="text" class="form-control" asp-for="AdSoyad" placeholder="Adınızı Ve Soyadınızı Giriniz..." required/>
+                                </div>
+                            </center>
+
+                            <center>
+                                <div class="form-group col-md-10 text-center">
+                                    <label>Mail Adresi</label>
+                                    <input type="text" class="form-control" asp-for="Mail" placeholder="Mail Adresini Giriniz..." required/>
+                                </div>
+                            </center>
+
+                            <center>
+                                <div class="form-group col-md-10 text-center">
+                                    <label>Telefon</label>
+                                    <input type="text" class="form-control" asp-for="Telefon" placeholder="Telefon Numarasını Giriniz..." required/>
+                                </div>
+                            </center>
+
+                            <center>
+                                <div class="form-group col-md-10 text-center">
+                                    <label>Başlık</label>
+                                    <input type="text" class="form-control" asp-for="Baslik" placeholder="Mesajınızın Başlığını Giriniz..." required/>
+                                </div>
+                            </center>
+
+                            <center>
+                                <div class="form-group col-md-10 text-center">
+                                    <label>Mesaj</label>
+                                    <textarea class="form-control" asp-for="Mesaj" placeholder="Mesajınızı Buraya Yazınız..." rows="6" required></textarea>
+                                </div>
+                            </center>
+
+                            <center>
+                                <button type="submit" class="btn btn-info">Mesaj Gönder</button>
+                            </center>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </center>
+        <br />
+
+    </div>
+</section>
+

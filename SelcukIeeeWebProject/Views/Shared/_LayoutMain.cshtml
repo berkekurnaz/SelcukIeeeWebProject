@@ -10,7 +10,7 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="img/fav.png">
+    <link rel="shortcut icon" href="~/template/img/fav.png">
     <!-- Author Meta -->
     <meta name="author" content="CodePixar">
     <!-- Meta Description -->
@@ -39,8 +39,8 @@
     <header class="default-header">
         <nav class="navbar navbar-expand-lg  navbar-light">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="~/template/img/logo.png" alt="">
+                <a class="navbar-brand" href="/Anasayfa/Index">
+                    <img id="logoSelcuk" src="~/template/img/logoSelcuk.png" alt="" width="200" height="40">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -48,21 +48,40 @@
 
                 <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#service">Service</a></li>
-                        <li><a href="#project">project</a></li>
-                        <li><a href="#blog">blog</a></li>
-                        <li><a href="#team">team</a></li>
-                        <!-- Dropdown -->
+                        <li><a href="/Anasayfa/Index">ANASAYFA</a></li>
+
                         <li class="dropdown">
                             <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                                Pages
+                                HAKKIMIZDA
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="generic.html">Generic</a>
-                                <a class="dropdown-item" href="elements.html">Elements</a>
+                                <a class="dropdown-item" href="/Anasayfa/IeeeNedir/">IEEE NEDİR?</a>
+                                <a class="dropdown-item" href="/Anasayfa/BizKimiz/">BİZ KİMİZ?</a>
+                                <a class="dropdown-item" href="/Anasayfa/YonetimKurulu/">YÖNETİM KURULU</a>
+                                <a class="dropdown-item" href="/Anasayfa/IdariKurul/">İDARİ KURUL</a>
+
                             </div>
                         </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                KOMİTELER
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/Komiteler/TeknikProjeler/">TEKNİK PROJELER</a>
+                                <a class="dropdown-item" href="/Komiteler/Tems/">TEMS</a>
+                                <a class="dropdown-item" href="/Komiteler/Eac/">EAC</a>
+                                <a class="dropdown-item" href="/Komiteler/Comsoc/">ComSoc</a>
+
+                            </div>
+                        </li>
+                        <li><a href="/Anasayfa/Duyurular/">DUYURULAR</a></li>
+                        <li><a href="/Anasayfa/Etkinlikler/">ETKİNLİKLERİMİZ</a></li>
+
+                        <li><a href="/Anasayfa/Blog?sayfa=1">BLOG</a></li>
+                        <li><a href="/Anasayfa/Iletisim/">İLETİŞİM</a></li>
+
+                        <!-- Dropdown -->
+
                     </ul>
                 </div>
             </div>
@@ -72,6 +91,57 @@
 
     @RenderBody()
 
+
+    <!-- start footer Area -->
+    <footer id="footerr" class="footer-area section-gap pb-3">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="single-footer-widget">
+                        <h6>Bilgiler</h6>
+                        <ul class="footer-nav">
+                            <li><a href="#">Biz Kimiz ?</a></li>
+                            <li><a href="#">Ieee Nedir ?</a></li>
+                            <li><a href="#">Komitelerimiz</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-footer-widget">
+                        <h6>Hızlı Menü</h6>
+                        <ul class="footer-nav">
+                            <li><a href="#">Duyurular</a></li>
+                            <li><a href="#">Etkinlikler</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-footer-widget">
+                        <h6>İletişim</h6>
+                        <ul class="footer-nav">
+                            <li><a href="#">Aramıza Katıl</a></li>
+                            <li><a href="#">İletişim</a></li>
+                            <li><a href="#">Sosyal Medya</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row footer-bottom d-flex justify-content-between">
+                <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+                    Selcuk Ieee &copy; @DateTime.Now.Year
+                </p>
+                <div class="col-lg-4 col-sm-12 footer-social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer Area -->
 
     <!-- Scripts -->
     <script src="~/template/js/vendor/jquery-2.2.4.min.js"></script>

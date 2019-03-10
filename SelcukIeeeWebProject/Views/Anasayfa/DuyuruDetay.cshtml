@@ -1,0 +1,68 @@
+﻿@model Duyurulars
+@{
+    ViewData["Title"] = "DuyuruDetay";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<section class="team-area section-gap">
+    <div class="container">
+
+        <center>
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-body">
+                        <p>@Model.Baslik</p>
+                    </div>
+                </div>
+            </div>
+        </center>
+        <br />
+
+        <center>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Eklenme Tarihi : @Model.Tarih</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Gönderici : @Model.Gonderici</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+        <br />
+
+        <center>
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-body">
+                        <p>@Model.Icerik</p>
+                    </div>
+                </div>
+            </div>
+        </center>
+        <br />
+
+        <center>
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="/Anasayfa/Duyurular/" class="btn btn-outline-info">Geriye Dön</a>
+                    </div>
+                </div>
+            </div>
+        </center>
+        <br />
+
+    </div>
+</section>
+
+

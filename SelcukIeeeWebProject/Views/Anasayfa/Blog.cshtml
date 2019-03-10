@@ -1,0 +1,43 @@
+﻿@model PagedList.Core.IPagedList<Blogs>
+@{
+    ViewData["Title"] = "Blog";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<!-- Start team Area -->
+<section class="team-area section-gap" id="team">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-40 col-lg-8">
+                <div class="title text-center" id="yonet-title">
+                    <h1 class="mb-10">Blog Yazılarımız</h1>
+                    <hr>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center d-flex align-items-center">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3 idari-team">
+                    <div class="thumb">
+                        <img class="img-fluid yonetimimg" src="~/template/img/omerdogan.jpg" alt="">
+                        <div class="align-items-center justify-content-center d-flex">
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="meta-text mt-30 text-center">
+                        <h4>@item.Baslik</h4>
+                        <p>PES Başkanı</p>
+                    </div>
+                </div>
+            }
+
+                <pager class="pager-container" list="@Model"  asp-action="Anasayfa" asp-controller="Blog" asp-route-keyword="@Model" />
+
+        </div>
+    </div>
+</section>
+<!-- End team Area -->

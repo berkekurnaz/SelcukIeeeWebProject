@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 
@@ -20,6 +21,7 @@ namespace SelcukIeeeWebProject
             IFileProvider physicalProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory());
 
             services.AddSingleton<IFileProvider>(physicalProvider);
+            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddSession();
             services.AddMvc();
             services.AddDistributedMemoryCache();
