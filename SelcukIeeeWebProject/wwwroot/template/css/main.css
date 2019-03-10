@@ -2844,6 +2844,17 @@ h6 {
   font-size: 16px;
 }
 
+@media(max-width:480px ) {
+
+    .SliderSýnýfý {
+        height: 200px;
+    }
+
+        .SliderSýnýfý img {
+            height: 100%;
+        }
+}
+
 @media (max-width: 991px) {
   .generic-banner .generic-banner-content p br {
     display: none;

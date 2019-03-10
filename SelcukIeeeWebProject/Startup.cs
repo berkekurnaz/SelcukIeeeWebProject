@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
+using ReflectionIT.Mvc.Paging;
 
 namespace SelcukIeeeWebProject
 {
@@ -23,6 +24,7 @@ namespace SelcukIeeeWebProject
             services.AddSingleton<IFileProvider>(physicalProvider);
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddSession();
+            services.AddPaging();
             services.AddMvc();
             services.AddDistributedMemoryCache();
         }

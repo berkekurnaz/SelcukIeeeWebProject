@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using PagedList.Core;
+using ReflectionIT.Mvc.Paging;
 using SelcukIeeeWebProject.DataAccessLayer;
 using SelcukIeeeWebProject.Models;
 
@@ -65,14 +65,11 @@ namespace SelcukIeeeWebProject.Controllers.Site
         }
 
         /* Anasayfa Blog Sayfasi */
-        public IActionResult Blog(int? sayfa = 1)
+        public IActionResult Blog(int sayfa = 1)
         {
             var query = blogOperations.GetAll().OrderByDescending(x => x.Id);
-            //PagedList<Blogs> model = new PagedList<Blogs>(query, sayfa, sayfaBoyu);
-            var sayfaNumber = sayfa == null || sayfa <= 0 ? 1 : sayfa.Value;
-            var sayfaBoyu = 9;
-            var model = query.ToPagedList(sayfaNumber,sayfaBoyu);
-            return View("Blog", model);
+            var model = PagingList.Create(query,9,sayfa);
+            return View(model);
         }
 
         /* Blog Detay Sayfasi */
@@ -142,6 +139,18 @@ namespace SelcukIeeeWebProject.Controllers.Site
 
         /* Hakkimizda Bolumu Idari Kurul Sayfasi */
         public IActionResult IdariKurul()
+        {
+            return View();
+        }
+
+        /* Sosyal Medya Sayfası */
+        public IActionResult SosyalMedya()
+        {
+            return View();
+        }
+
+        /* Aramıza Katıl Sayfası */
+        public IActionResult Katil()
         {
             return View();
         }
