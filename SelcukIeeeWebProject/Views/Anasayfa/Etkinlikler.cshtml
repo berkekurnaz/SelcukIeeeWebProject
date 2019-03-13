@@ -4,23 +4,19 @@
     Layout = "~/Views/Shared/_LayoutMain.cshtml";
 }
 
-<section class="generic-banner relative">
-    <div class="container">
-        <div class="row height align-items-center justify-content-center">
-            <div class="col-lg-10">
-                <div class="generic-banner-content">
-                    <h2 class="text-white">Etkinlikler</h2>
-                    <hr />
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 
 <!-- Start Ieee Nedir Area -->
 <section class="team-area section-gap" id="team">
     <div class="container">
+
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-40 col-lg-8">
+                <div class="title text-center" id="yonet-title">
+                    <h1 class="mb-10">Etkinliklerimiz</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
 
         <div class="row">
             @foreach (var item in Model)

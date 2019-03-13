@@ -4,23 +4,20 @@
     Layout = "~/Views/Shared/_LayoutMain.cshtml";
 }
 
-<section class="generic-banner relative">
-    <div class="container">
-        <div class="row height align-items-center justify-content-center">
-            <div class="col-lg-10">
-                <div class="generic-banner-content">
-                    <h2 class="text-white">Duyurular</h2>
-                    <hr />
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 <!-- Start Ieee Nedir Area -->
 <section class="team-area section-gap" id="team">
     <div class="container">
+
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-40 col-lg-8">
+                <div class="title text-center" id="yonet-title">
+                    <h1 class="mb-10">Duyurular</h1>
+                    <hr>
+                </div>
+            </div>
+        </div>
 
         @foreach (var item in Model)
         {
@@ -30,9 +27,9 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6 text-center">
-                                    @if(item.Baslik.Length > 50)
+                                    @if (item.Baslik.Length > 50)
                                     {
-                                        <p>@item.Baslik.Substring(0,50) ...</p>
+                                        <p>@item.Baslik.Substring(0, 50) ...</p>
                                     }
                                     else
                                     {

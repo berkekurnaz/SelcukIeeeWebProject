@@ -1,0 +1,81 @@
+﻿@model Blogs
+@{
+    ViewData["Title"] = "BlogDetay";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+
+<!-- Start Ieee Nedir Area -->
+<section class="team-area section-gap" id="team">
+    <div class="container">
+
+        <center>
+            <div class="col-md-10">
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <p>
+                                    @Model.Baslik
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                Tarih : @Model.EklenmeTarihi
+                            </div>
+                            <div class="col-md-6">
+                                Yazar : @Model.Yazar
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <img src="~/img/bloglar/@Model.Fotograf" class="img-fluid" width="400" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <p>
+                                    @Html.Raw(Model.Icerik)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-9 text-center">
+                                Yazar : @Model.Yazar --- Tarih : @Model.EklenmeTarihi
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <a href="/Anasayfa/Blog/" class="btn btn-info">Geriye Dön</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+            </div>
+            <br />
+        </center>
+
+
+    </div>
+</section>
+<!-- End Ieee Nedir Area -->

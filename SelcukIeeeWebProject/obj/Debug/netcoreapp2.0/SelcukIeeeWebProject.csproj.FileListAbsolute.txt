@@ -8,4 +8,3 @@ D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\o
 D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\bin\Debug\netcoreapp2.0\SelcukIeeeWebProject.pdb
 D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\obj\Debug\netcoreapp2.0\SelcukIeeeWebProject.dll
 D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\obj\Debug\netcoreapp2.0\SelcukIeeeWebProject.pdb
-D:\VisualStudioProjeler\2019Projeler\SelcukIeeeWebProject\SelcukIeeeWebProject\obj\Debug\netcoreapp2.0\SelcukIeeeWebProject.csprojAssemblyReference.cache
